@@ -22,5 +22,17 @@
     "title": "Russia invaded Ukraine",
     "desc": "Russia launched a full-scale invasion of Ukraine, marking the largest conflict in Europe since World War II. Following President Vladimir Putin's announcement of a \"special military operation,\" Russian forces entered from Russia, Belarus, and Crimea, targeting cities nationwide and aiming to capture Kyiv.",
     "link": "https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022%E2%80%93present)"
+  },
+  {
+    "date": "1919-06-20",
+    "title": "A&W Root Beer was founded",
+    "desc": "A&W Root Beer was created by Roy W. Allen, who introduced his signature beverage at a roadside stand in Lodi, California, on June 20 of that year. Allen later partnered with Frank Wright in 1922 to trademark the brand name \"A&W\".",
+    "link": "https://www.awrestaurants.com/blog/memories-history/it-all-started-with-a-roadside-stand-the-roots-of-aw-restaurants"
+  },
+  {
+    "date": "1918-11-11",
+    "title": "World War II ended",
+    "desc": "World War I officially ended with the signing of the armistice between the Allies and Germany on November 11, 1918, at 11:00 a.m. (the \"eleventh hour of the eleventh day of the eleventh month\"), ending the fighting on the Western Front. While this date is recognized as the end of the war, formal peace treaties were signed later, such as the Treaty of Versailles on June 28, 1919. ",
+    "link": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918"
   }
 ]
