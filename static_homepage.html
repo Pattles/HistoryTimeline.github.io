@@ -34,9 +34,24 @@
     .section-hero__wrapper {
         padding: 2rem;
         background: rgb(244, 244, 231);
+        border-color: rgb(172, 126, 9);
+        border-style: solid;
         overflow: hidden;
         border-bottom-left-radius: 75rem 5rem;
         border-bottom-right-radius: 75rem 5rem;
+    }
+    .section-hero__btn, .modal-addnew__btn {
+        background-color: whitesmoke;
+        border: 0.1rem solid black;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    button:hover{
+        border-color:  rgb(172, 126, 9);
+        color:  rgb(172, 126, 9);
+        font-weight: bold;
     }
 
     #section-events__cards {
@@ -50,9 +65,7 @@
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.15);
         padding: 1rem;
         border-radius: 1rem;
-        border-color: black;
-        border-width: 0.1rem;
-        border-style: solid;
+        border: 0.1rem solid black;
     }
 
     /* Footer */
@@ -81,11 +94,11 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        background-color: whitesmoke;
+        background-color: rgb(244, 244, 231);
         padding: 3rem;
         border-radius: 1rem;
-        border-color: black;
-        border-width: 0.1rem;
+        border-color: rgb(172, 126, 9);
+        border-width: 0.15rem;
         border-style: solid;
         flex-wrap: wrap;
         width: 100%;
@@ -114,11 +127,11 @@
                     </p>
                 </div>
                 <div> <!-- Date and time -->
-                    <input type="date" id="hero-date">
+                    <input class="section-hero__btn" type="date" id="hero-date">
                 </div>
                 <div>
-                    <button id="hero-btnGen">Generate</button>
-                    <button id="hero-btnAddnew">Add New</button>
+                    <button class="section-hero__btn" id="hero-btnGen">Generate</button>
+                    <button class="section-hero__btn" id="hero-btnAddnew">Add New</button>
                 </div>
             </div>
         </div>
@@ -139,9 +152,6 @@
             <div>
                 Created by <a href="https://github.com/pattles/" target="_blank">Patrik</a> on March 12 2026 - <a href="https://github.com/Pattles/HistoryTimeline" target="_blank">Github</a>
             </div>
-            <div>
-                v1.0
-            </div>
         </div>
     </footer>
     <div id="modal-addnew"> <!-- popup modal -->
@@ -153,8 +163,8 @@
                 <textarea id="input-addnewDesc" placeholder="description"></textarea>
                 <input id="input-addnewLink" placeholder="relevant links (optional)">
                 <div class="modal-addnew__btns">
-                    <button style="flex: 1;" id="modal-addnewSubmit">Submit</button>
-                    <button style="flex: 1;" id="modal-addnewClose">Close</button>
+                    <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewSubmit">Submit</button>
+                    <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewClose">Close</button>
                 </div>
             </div>
         </div>
