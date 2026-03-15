@@ -1,0 +1,22 @@
+{
+  "name": "historytimeline",
+  "version": "1.0.0",
+  "description": "*Last modified: March 12 2026*",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pattles/HistoryTimeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pattles/HistoryTimeline/issues"
+  },
+  "homepage": "https://github.com/Pattles/HistoryTimeline#readme"
+}
