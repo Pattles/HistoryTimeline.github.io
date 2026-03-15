@@ -5,8 +5,8 @@ const path = require('path');
 const server = http.createServer((req, res) => {
     
     // Serve the HTML page
-    if (req.url === '/' || req.url === '/static_homepage.html') {
-        const file = fs.readFileSync(path.join(__dirname, 'static_homepage.html'));
+    if (req.url === '/' || req.url === '/index.html') {
+        const file = fs.readFileSync(path.join(__dirname, 'index.html'));
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(file);
     }
