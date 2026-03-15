@@ -136,13 +136,14 @@
                 <div>
                     <button class="section-hero__btn" id="hero-btnGen">Generate</button>
                     <button class="section-hero__btn" id="hero-btnAddnew">Add New</button>
+                    <button class="section-hero__btn" id="hero-btnRandom">Random Date</button>
                 </div>
             </div>
         </div>
     </section>
     <section> <!-- section-events -->
         <div class="container">
-            <h3 id="section-events__headline">What happened on April 1st 1987?</h3>
+            <h3 id="section-events__headline">What happened on [Today's date]?</h3>
             <div id="section-events__cards">
                 <div class="section-events__card">
                     <h4>Something happened - Read more</h4>
@@ -198,6 +199,8 @@
             allEvents = events;
         });
 
+    document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(new Date().toISOString().split('T')[0])}?`;
+
 
     // # Adding a new card on button press
     const heroBtnGen = document.getElementById('hero-btnGen');
@@ -236,6 +239,35 @@
                 cardsContainer.appendChild(card);
             });
         }
+    });
+
+    // Generating random date
+    const heroBtnRandom = document.getElementById('hero-btnRandom');
+
+    heroBtnRandom.addEventListener('click', () => {
+        // Clearing everything first under the div
+        document.getElementById('section-events__cards').innerHTML = '';
+
+        // Getting a random date
+        const allDates = allEvents.map(event => event.date);
+        const randomDate = allDates[Math.floor(Math.random() * allDates.length)];
+
+        // Changing headline -> What happened on [date]? – if no date/invalid date entered, default to today's date
+        document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(randomDate)}?`;
+
+        const results = allEvents.filter(event => event.date === randomDate);
+
+        // Creating a new card for each event
+        results.forEach(event => {
+            const card = document.createElement('div');
+            card.classList.add('section-events__card');
+            card.innerHTML = `
+                <h4>${event.title}${event.link ? ` - <a href="${event.link}" target="_blank">Read more</a>` : ''}</h4>
+                <p>${event.desc}</p>
+            `;
+            cardsContainer.appendChild(card);
+        });
+
     });
 
     // # Making a popup
