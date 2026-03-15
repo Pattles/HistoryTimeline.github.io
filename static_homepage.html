@@ -81,15 +81,13 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.4); /* dark overlay */
-        display: none; /* flex / none */
+        display: flex; /* flex / none */
         justify-content: center;
         align-items: center;
     }
-
     #modal-addnew h4 {
         margin-top: 0.5rem;
     }
-
     .modal-addnew__card {
         display: flex;
         flex-direction: column;
@@ -103,16 +101,22 @@
         flex-wrap: wrap;
         width: 100%;
     }
-
     #input-addnewDesc {
         min-width: 10rem;
         min-height: 3rem;
     }
-
     .modal-addnew__btns {
         width: 100%; 
         display: flex; 
         gap: 0.5rem;
+    }
+    .modal-addnew__textarea {
+        background-color: whitesmoke;
+        border: 0.1rem solid black;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        opacity: 0.8;
     }
 </style>
 </head>
@@ -158,10 +162,10 @@
         <div class="container" style="height: 100%">
             <div class="modal-addnew__card">
                 <h4>Enter event details</h4>
-                <input type="date" id="input-addnewDate">
-                <input placeholder="title" id="input-addnewTitle">
-                <textarea id="input-addnewDesc" placeholder="description"></textarea>
-                <input id="input-addnewLink" placeholder="relevant links (optional)">
+                <input class="section-hero__btn" type="date" id="input-addnewDate">
+                <input class="modal-addnew__textarea" placeholder="title" id="input-addnewTitle">
+                <textarea class="modal-addnew__textarea" id="input-addnewDesc" placeholder="description"></textarea>
+                <input class="modal-addnew__textarea" id="input-addnewLink" placeholder="relevant links (optional)">
                 <div class="modal-addnew__btns">
                     <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewSubmit">Submit</button>
                     <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewClose">Close</button>
