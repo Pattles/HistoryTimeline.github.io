@@ -212,10 +212,10 @@
         const heroDate = document.getElementById('hero-date').value;
         const results = allEvents.filter(event => event.date === heroDate);
 
-        // Changing headline -> What happened on [date]?
-        document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(heroDate)}?`;
+        // Changing headline -> What happened on [date]? – if no date/invalid date entered, default to today's date
+        document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(heroDate || new Date().toISOString().split('T')[0])}?`;
 
-        if (results.length === 0) {
+        if (results.length === 0 || !heroDate) {
             // Create a bogus card
             const card = document.createElement('div');
             card.classList.add('section-events__card');
