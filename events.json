@@ -100,5 +100,23 @@
     "title": "Germany invaded Poland, marking the beginning of WWII",
     "desc": "World War II officially began on September 1, 1939, when Germany invaded Poland, prompting Britain and France to declare war on Germany two days later, on September 3, 1939. While this is the widely accepted date, some historians consider earlier conflicts, such as the 1937 Japanese invasion of China, as the start.",
     "link": "https://en.wikipedia.org/wiki/World_War_II"
+  },
+  {
+    "date": "1789-07-14",
+    "title": "Parisian revolutionaries stormed the Bastille, kicking off the French Revolution",
+    "desc": "On July 14, 1789, Parisian revolutionaries stormed the Bastille, a medieval fortress and prison symbolizing royal tyranny, to seize gunpowder and weapons. Defecting French Guards and angry citizens overwhelmed the garrison, marking a decisive victory against King Louis XVI and accelerating the French Revolution, which is still celebrated annually on this date.",
+    "link": "https://www.britannica.com/event/storming-of-the-Bastille"
+  },
+  {
+    "date": "2001-09-11",
+    "title": "Four commercial planes hijacked simultaneously New York's World Trade Center towers, the Pentagon, and a random field in the deadliest terrorist attack in American history",
+    "desc": "The September 11 attacks, colloquially known as 9/11, were a series of coordinated Islamic terrorist suicide attacks perpetrated by al-Qaeda against the United States in 2001. Nineteen terrorists hijacked four airliners, then flew one into each of the Twin Towers at the World Trade Center in New York City.",
+    "link": "https://en.wikipedia.org/wiki/September_11_attacks"
+  },
+  {
+    "date": "1973-09-11",
+    "title": "Salvador Allende was overthrown by CIA-backed coup in Chile",
+    "desc": "On September 11, 1973, Chilean armed forces led by General Augusto Pinochet overthrew President Salvador Allende’s democratically elected Marxist government in a violent coup.",
+    "link": "https://www.npr.org/2023/09/10/1193755188/chile-coup-50-years-pinochet-kissinger-human-rights-allende"
   }
 ]
