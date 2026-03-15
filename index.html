@@ -47,6 +47,7 @@
         padding: 0.5rem 1rem;
         cursor: pointer;
         opacity: 0.8;
+        width: 7rem;
     }
     button:hover{
         border-color:  rgb(172, 126, 9);
@@ -126,17 +127,17 @@
             <div class="container">
                 <div> <!-- headers and stuff -->
                     <h1>History Timeline</h1>
-                    <p>
+                    <p style="text-align: center;">
                         Enter a date and see everything that happened on that date.
                     </p>
                 </div>
                 <div> <!-- Date and time -->
                     <input class="section-hero__btn" type="date" id="hero-date">
                 </div>
-                <div>
+                <div style="justify-content: center; display: flex; gap: 0.2rem;">
                     <button class="section-hero__btn" id="hero-btnGen">Generate</button>
                     <button class="section-hero__btn" id="hero-btnAddnew">Add New</button>
-                    <button class="section-hero__btn" id="hero-btnRandom">Random Date</button>
+                    <button class="section-hero__btn" id="hero-btnRandom">Random</button>
                 </div>
             </div>
         </div>
