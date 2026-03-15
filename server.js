@@ -2,6 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+const port = process.env.PORT || 3000;
+
 const server = http.createServer((req, res) => {
     
     // Serve the HTML page
@@ -37,5 +39,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
+    console.log(`Server running at http://localhost:${port}`);
 });

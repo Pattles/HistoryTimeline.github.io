@@ -13,7 +13,7 @@ Before you start anything, check:
 To start localhost:
 - open the project in Terminal
 - run 'nodemon server.js'
-- open http://localhost:3000/static_homepage.html
+- open http://localhost:3000/index.html
 You're done.
 
 Try to break it? Work on improving it? Up to you..
