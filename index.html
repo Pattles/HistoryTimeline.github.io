@@ -95,6 +95,7 @@
         gap: 0.5rem;
         background-color: rgb(244, 244, 231);
         padding: 3rem;
+        margin: 1rem;
         border-radius: 1rem;
         border-color: rgb(172, 126, 9);
         border-width: 0.15rem;
@@ -118,6 +119,11 @@
         padding: 0.5rem 1rem;
         cursor: pointer;
         opacity: 0.8;
+    }
+    .modal-addnew__date {
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
     }
 </style>
 </head>
@@ -164,7 +170,7 @@
         <div class="container" style="height: 100%">
             <div class="modal-addnew__card">
                 <h4>Enter event details</h4>
-                <input class="section-hero__btn" type="date" id="input-addnewDate">
+                <input class="section-hero__btn" type="date" id="input-addnewDate"> <!-- class="modal-addnew__date" if you'd like it centered -->
                 <input class="modal-addnew__textarea" placeholder="title" id="input-addnewTitle">
                 <textarea class="modal-addnew__textarea" id="input-addnewDesc" placeholder="description"></textarea>
                 <input class="modal-addnew__textarea" id="input-addnewLink" placeholder="relevant links (optional)">
