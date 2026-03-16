@@ -1,3 +1,22 @@
+/* Mobile stuff */
+@media (max-width: 600px) {
+    #section-events__cards {
+        max-width: 100%;
+    }
+
+    .section-hero__btn, .modal-addnew__btn {
+        width: 100%;
+    }
+
+    .modal-addnew__card {
+        padding: 1.5rem;
+    }
+
+    .container {
+        margin: 0 1rem;
+    }
+}
+
 /* main stuff */
 .container {
     display: flex;
