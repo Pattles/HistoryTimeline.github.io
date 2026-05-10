@@ -1,0 +1,198 @@
+/* The big stuff */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f7f2ea;;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 2rem 4rem 3rem; 
+}
+
+button, input {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+    border: 0.5px solid #c9a84c44;
+    color: #c9a84c;
+    background: #c9a84c11;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+/* Sections */
+/* Hero */
+.section-hero {
+    padding-top: 5rem;
+    background-color: #18100a;
+    position: relative; 
+    overflow: hidden;
+}
+
+.section-hero__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: #c8a44a;
+}
+
+.section-hero__title {
+    font-family: 'Playfair Display', serif;
+    color: #f7f2ea;
+    margin: 0 0 6px;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: bold;
+}
+
+.section-hero__buttons {
+    display: flex;
+    gap: 0.25rem;
+}
+
+
+/* Events */
+.section-events {
+    background-color: #f7f2ea;
+}
+
+.section-events__lead {
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.12em; 
+    color: #8a7d65; 
+    font-weight: 500; 
+
+}
+.section-events__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.section-events__timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: #c9a84c55;
+}
+
+.section-events__dot {
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #c9a84c;
+    border: 2px solid #f5f0e8;
+    box-shadow: 0 0 0 1px #c9a84c;
+}
+
+.section-events__card {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0 0 1.25rem 1.25rem;
+}
+
+.section-events__headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #1a1208;
+    margin: 0 0 3px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+}
+
+.section-events__desc {
+    font-size: 12px;
+    color: #6b5f4a;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+
+/* Footer */
+.footer-divider {
+    height: 0.5px;
+    background: #d6cfc0;
+    margin: 0.5rem 0;
+}
+
+footer {
+    padding: 2rem 4rem; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    font-size: 12px;
+    color: #6b5f4a;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.footer-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-meta__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #8a7d65;
+    font-weight: 400;
+}
+
+.footer-meta__dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c9a84c;
+    flex-shrink: 0;
+}
+
+.footer-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #c9a84c;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+/*
+#18100a — near-black dark brown (header background)
+#c8a44a — antique gold (accents, tags, dots, year labels)
+#f7f2ea — warm parchment (card background, header text)
+#e0d9ce — slightly darker parchment (outer background)
+#d0c9b8 — muted tan (borders, divider)
+#7a6e5a / #8a7d65 / #655a46 — various warm grays (subtitle and body text at different opacities)
+*/

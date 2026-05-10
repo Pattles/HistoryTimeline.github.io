@@ -26,16 +26,18 @@ function handleGenerate() {
     const heroDate = document.getElementById('hero-date').value;
     const results = allEvents.filter(event => event.date === heroDate);
 
-    // Changing headline -> What happened on [date]? – if no date/invalid date entered, default to today's date
-    document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(heroDate || new Date().toISOString().split('T')[0])}?`;
+    // Changing headline -> What happened on [date]? – if no date/invalid date entered, default to random date
+    document.getElementById('section-events__lead').innerHTML = `${formatDate(heroDate || new Date().toISOString().split('T')[0])}`;
 
     if (results.length === 0 || !heroDate) {
         // Create a bogus card
         const card = document.createElement('div');
         card.classList.add('section-events__card');
         card.innerHTML = `
-            <h4>Nothing happened!</h4>
-            <p>Just kidding, I didn\'t add anything for this date</p>
+            <div class="section-events__dot"></div>
+            <h4 class="section-events__headline">Nothing happened!</h4>
+            <p class="section-events__desc">Just kidding, I haven\'t added anything for this date yet.</p>
+            <a class="section-events__desc" href="https://pserikov.com">Read more</a>
         `;
         cardsContainer.appendChild(card); 
     } else {
@@ -44,8 +46,10 @@ function handleGenerate() {
             const card = document.createElement('div');
             card.classList.add('section-events__card');
             card.innerHTML = `
-                <h4>${event.title}${event.link ? ` - <a href="${event.link}" target="_blank">Read more</a>` : ''}</h4>
-                <p>${event.desc}</p>
+                <div class="section-events__dot"></div>
+                <h4 class="section-events__headline">${event.title}</h4>
+                <p class="section-events__desc">${event.desc}</p>
+                <a class="section-events__desc" href="${event.link}">Read more</a>
             `;
             cardsContainer.appendChild(card);
         })
@@ -63,8 +67,8 @@ function handleRandom() {
     const allDates = allEvents.map(event => event.date);
     const randomDate = allDates[Math.floor(Math.random() * allDates.length)];
 
-    // Changing headline -> What happened on [date]? – if no date/invalid date entered, default to today's date
-    document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(randomDate)}?`;
+    // Changing headline -> May 1 2026 – if no date/invalid date entered, default to today's date
+    document.getElementById('section-events__lead').innerHTML = `${formatDate(randomDate)}`;
 
     const results = allEvents.filter(event => event.date === randomDate);
 
@@ -73,8 +77,10 @@ function handleRandom() {
         const card = document.createElement('div');
         card.classList.add('section-events__card');
         card.innerHTML = `
-            <h4>${event.title}${event.link ? ` - <a href="${event.link}" target="_blank">Read more</a>` : ''}</h4>
-            <p>${event.desc}</p>
+            <div class="section-events__dot"></div>
+            <h4 class="section-events__headline">${event.title}</h4>
+            <p class="section-events__desc">${event.desc}</p>
+            <a class="section-events__desc" href="${event.link}">Read more</a>
         `;
         cardsContainer.appendChild(card);
     });
@@ -126,14 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     // Changing the headline to today's date
-    document.getElementById('section-events__headline').innerHTML = `What happened on ${formatDate(new Date().toISOString().split('T')[0])}?`;
+    document.getElementById('section-events__lead').innerHTML = `SAMPLE - ${formatDate(new Date().toISOString().split('T')[0])}`;
 
     // Hero buttons
     document.getElementById('hero-btnGen').addEventListener('click', handleGenerate);
     document.getElementById('hero-btnRandom').addEventListener('click', handleRandom);
 
     // Addnew modal
-    document.getElementById('hero-btnAddnew').addEventListener('click', handleAddnewOpen);
-    document.getElementById('modal-addnewClose').addEventListener('click', handleAddnewClose);
-    document.getElementById('modal-addnewSubmit').addEventListener('click', handleAddnewSubmit);
+    // document.getElementById('hero-btnAddnew').addEventListener('click', handleAddnewOpen);
+    // document.getElementById('modal-addnewClose').addEventListener('click', handleAddnewClose);
+    // document.getElementById('modal-addnewSubmit').addEventListener('click', handleAddnewSubmit);
 });
