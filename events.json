@@ -31,7 +31,7 @@
   },
   {
     "date": "1918-11-11",
-    "title": "World War II ended",
+    "title": "World War I ended",
     "desc": "World War I officially ended with the signing of the armistice between the Allies and Germany on November 11, 1918, at 11:00 a.m. (the \"eleventh hour of the eleventh day of the eleventh month\"), ending the fighting on the Western Front. While this date is recognized as the end of the war, formal peace treaties were signed later, such as the Treaty of Versailles on June 28, 1919. ",
     "link": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918"
   },
@@ -124,5 +124,23 @@
     "title": "Eruption of Mount Vesuvius in Pompeii",
     "desc": "In 79 AD, Mount Vesuvius, a stratovolcano located in the modern-day region of Campania, erupted, causing one of the deadliest eruptions in history.",
     "link": "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD"
+  },
+  {
+    "date": "1964-10-16",
+    "title": "Sharon Stouder won four Olympic medals as a 15-year-old swimmer in 1964",
+    "desc": "American swimmer Sharon Stouder sets a world record of 1:04.7 to beat Ada Kok of the Netherlands by 0.9 seconds and win the women's 100 m butterfly at the Tokyo Olympics",
+    "link": "https://www.olympedia.org/results/5804"
+  },
+  {
+    "date": "1812-06-18",
+    "title": "The War of 1812 started",
+    "desc": "The War of 1812 officially began on June 18, 1812, when U.S. President James Madison signed a declaration of war against Great Britain. The conflict was declared following tensions over maritime rights, trade blockades, and British support for Native American tribes against U.S. expansion",
+    "link": "https://www.britannica.com/event/War-of-1812"
+  },
+  {
+    "date": "1776-07-04",
+    "title": "The American Revolutionary War happened",
+    "desc": "In 1776, the American colonies declared independence from Great Britain, officially adopting the Declaration of Independence on July 4th and transforming the rebellion into the Revolutionary War. Key events included the British evacuation of Boston, the challenging New York campaign, the publication of Thomas Paine’s Common Sense, and Washington’s surprise crossing of the Delaware River.",
+    "link": "https://en.wikipedia.org/wiki/American_Revolutionary_War"
   }
 ]
