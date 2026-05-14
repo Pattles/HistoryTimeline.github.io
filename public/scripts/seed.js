@@ -1,0 +1,175 @@
+require('dotenv').config();
+const mongoose = require('mongoose');
+const Event = require('../../db');
+
+mongoose.connect(process.env.MONGODB_URI)
+    .then(async () => {
+        await Event.deleteMany({}); // clears existing data
+
+        await Event.insertMany([
+            {
+                date: '0330-05-11',
+                title: 'The Byzantine Empire was founded.',
+                desc: 'The Byzantine Empire (c. 330–1453) was the long-lasting eastern continuation of the Roman Empire, centered in Constantinople. It served as a major power in the Mediterranean, preserving Greek and Roman knowledge while embracing Eastern Orthodox Christianity. ',
+                link: 'https://en.wikipedia.org/wiki/Byzantine_Empire'
+            },
+            {
+                date: '2022-09-21',
+                title: 'Russia declared its first draft',
+                desc: 'Russia declared that it was initiating a \'partial mobilization\' of military reservists to bolster the country\'s war effort against Ukraine.',
+                link: 'https://en.wikipedia.org/wiki/2022_Russian_mobilization'
+            },
+            {
+                date: '2006-10-03',
+                title: 'A Turkish Airlines plane carrying 113 people from Albania to Turkey was hijacked',
+                desc: 'Turkish Airlines Flight 1476, a Turkish Airlines plane carrying 113 people from Tirana, Albania to Istanbul, Turkey, was hijacked, but lands at Italy\'s Brindisi Airport. The hijackers surrendered and were arrested by Italian police.',
+                link: 'https://en.wikipedia.org/wiki/Turkish_Airlines_Flight_1476'
+            },
+            {
+                date: '2006-10-03',
+                title: 'US scientists win Nobel Prize in Physics for research in cosmic background radiation.',
+                desc: 'United States scientists John C. Mather and George Smoot win the Nobel Prize in Physics for research into cosmic microwave background radiation that helps explain the origins of galaxies and stars.',
+                link: 'https://www.bloomberg.com/apps/news?pid=20601085&sid=aQwqjcSQZSWA&refer=europe'
+            },
+            {
+                date: '2022-02-24',
+                title: 'Russia invaded Ukraine',
+                desc: 'Russia launched a full-scale invasion of Ukraine, marking the largest conflict in Europe since World War II. Following President Vladimir Putin\'s announcement of a \'special military operation,\' Russian forces entered from Russia, Belarus, and Crimea, targeting cities nationwide and aiming to capture Kyiv.',
+                link: 'https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022%E2%80%93present)'
+            },
+            {
+                date: '1919-06-20',
+                title: 'A&W Root Beer was founded',
+                desc: 'A&W Root Beer was created by Roy W. Allen, who introduced his signature beverage at a roadside stand in Lodi, California, on June 20 of that year. Allen later partnered with Frank Wright in 1922 to trademark the brand name \'A&W\'.',
+                link: 'https://www.awrestaurants.com/blog/memories-history/it-all-started-with-a-roadside-stand-the-roots-of-aw-restaurants'
+            },
+            {
+                date: '1918-11-11',
+                title: 'World War I ended',
+                desc: 'World War I officially ended with the signing of the armistice between the Allies and Germany on November 11, 1918, at 11:00 a.m. (the \'eleventh hour of the eleventh day of the eleventh month\'), ending the fighting on the Western Front. While this date is recognized as the end of the war, formal peace treaties were signed later, such as the Treaty of Versailles on June 28, 1919. ',
+                link: 'https://en.wikipedia.org/wiki/Armistice_of_11_November_1918'
+            },
+            {
+                date: '1914-07-28',
+                title: 'World War I begins',
+                desc: 'On July 28, 1914, one month after the assassination of Archduke Franz Ferdinand, Austria-Hungary declared war on Serbia. This pivotal action, initiated by a telegram from Vienna to Belgrade, triggered the alliance system and escalated the conflict into World War I. Germany had previously given \'blank cheque\' support, while Russia pledged to defend Serbia.',
+                link: 'https://en.wikipedia.org/wiki/July_Crisis'
+            },
+            {
+                date: '1572-08-24',
+                title: 'The St. Bartholomew Massacre happened',
+                desc: 'The Saint Bartholomew\'s Day massacre in 1572 was a targeted group of assassinations and a wave of Catholic mob violence directed against the Huguenots during the French Wars of Religion.',
+                link: 'https://en.wikipedia.org/wiki/St._Bartholomew%27s_Day_massacre'
+            },
+            {
+                date: '1945-02-23',
+                title: 'the flag raising on Iwo Jima',
+                desc: 'On February 23, 1945, during the Battle of Iwo Jima, U.S. Marines raised two flags atop Mount Suribachi. The second, larger flag-raising was captured in Joe Rosenthal’s iconic Pulitzer Prize-winning photograph, symbolizing victory and sacrifice. The event, featuring six men, boosted morale during the 36-day battle.',
+                link: 'https://www.archives.gov/research/still-pictures/highlights/flag-raising-on-iwo-jima'
+            },
+            {
+                date: '1945-02-06',
+                title: 'Bob Marley was born',
+                desc: 'Bob Marley was born on February 6, 1945, in Nine Mile, Saint Ann Parish, Jamaica, to Cedella Malcolm and Norval Sinclair Marley. He grew up in rural Jamaica and later moved to Trench Town at age 9. His birthplace is now a popular tourist attraction known as the \'Spirit of Reggae\'.',
+                link: 'https://en.wikipedia.org/wiki/Bob_Marley'
+            },
+            {
+                date: '1945-02-06',
+                title: 'MacArthur announces Manila\'s capture, 5,000 prisoners liberated',
+                desc: 'General Douglas MacArthur announced the capture of Manila and the liberation of 5,000 prisoners. Yugoslav Partisans began the Mostar operation.',
+                link: 'https://www.youtube.com/watch?v=0ttS_is_zck&t=225'
+            },
+            {
+                date: '2026-03-12',
+                title: 'This site was created',
+                desc: 'I had the idea to make this in 2022, but I didn\'t know how to use HTML, CSS, and JS to make it–only Python. On March 12th 2026, I was looking through my ideas list and realized I can make this, so I did.',
+                link: 'https://github.com/Pattles/HistoryTimeline'
+            },
+            {
+                date: '1781-03-13',
+                title: 'William Herschel sees what he thinks is a comet but actually discovers the planet Uranus',
+                desc: 'On March 13, 1781, astronomer William Herschel discovered Uranus while surveying stars in Gemini with a home-built telescope. Initially believing the object was a comet due to its movement, further observations of its near-circular orbit confirmed it was a new planet. Herschel proposed naming it Georgium Sidus (George’s Star) after King George III, though it was later named Uranus by Johann Bode.',
+                link: 'https://www.nasa.gov/history/240-years-ago-astronomer-william-herschel-identifies-uranus-as-the-seventh-planet/'
+            },
+            {
+                date: '1781-03-13',
+                title: 'Karl Friedrich Schinkel was born',
+                desc: 'Prussian architect Karl Friedrich Schinkel (1781–1841) was a leading figure in Neoclassical and Gothic Revival architecture, best known for his iconic buildings in Berlin. His Altes Museum became a model for national art museums worldwide, and his Bauakademie is considered a forerunner of modern architecture.',
+                link: 'https://en.wikipedia.org/wiki/Karl_Friedrich_Schinkel'
+            },
+            {
+                date: '1648-10-24',
+                title: 'The Thirty Years war ended',
+                desc: 'The Thirty Years\' War ended in 1648 with the signing of the Peace of Westphalia. Specifically, the treaties were signed on October 24, 1648, in the Westphalian towns of Münster and Osnabrück, concluding decades of conflict across Europe.',
+                link: 'https://en.wikipedia.org/wiki/Thirty_Years%27_War'
+            },
+            {
+                date: '1562-03-01',
+                title: 'The Massacre of Vassy happened',
+                desc: 'The Massacre of Vassy Frenc: massacre de Wassy) was the murder of Huguenot worshippers and citizens in an armed action by troops of the Duke of Guise, in Wassy, France on 1 March 1562. The massacre is identified as the first major event in the French Wars of Religion.',
+                link: 'https://en.wikipedia.org/wiki/Massacre_of_Vassy#:~:text=The%20Massacre%20of%20Vassy%20(French,the%20French%20Wars%20of%20Religion.'
+            },
+            {
+                date: '1939-09-01',
+                title: 'Germany invaded Poland, marking the beginning of WWII',
+                desc: 'World War II officially began on September 1, 1939, when Germany invaded Poland, prompting Britain and France to declare war on Germany two days later, on September 3, 1939. While this is the widely accepted date, some historians consider earlier conflicts, such as the 1937 Japanese invasion of China, as the start.',
+                link: 'https://en.wikipedia.org/wiki/World_War_II'
+            },
+            {
+                date: '1789-07-14',
+                title: 'Parisian revolutionaries stormed the Bastille, kicking off the French Revolution',
+                desc: 'On July 14, 1789, Parisian revolutionaries stormed the Bastille, a medieval fortress and prison symbolizing royal tyranny, to seize gunpowder and weapons. Defecting French Guards and angry citizens overwhelmed the garrison, marking a decisive victory against King Louis XVI and accelerating the French Revolution, which is still celebrated annually on this date.',
+                link: 'https://www.britannica.com/event/storming-of-the-Bastille'
+            },
+            {
+                date: '2001-09-11',
+                title: 'Four commercial planes hijacked simultaneously New York\'s World Trade Center towers, the Pentagon, and a random field in the deadliest terrorist attack in American history',
+                desc: 'The September 11 attacks, colloquially known as 9/11, were a series of coordinated Islamic terrorist suicide attacks perpetrated by al-Qaeda against the United States in 2001. Nineteen terrorists hijacked four airliners, then flew one into each of the Twin Towers at the World Trade Center in New York City.',
+                link: 'https://en.wikipedia.org/wiki/September_11_attacks'
+            },
+            {
+                date: '1973-09-11',
+                title: 'Salvador Allende was overthrown by CIA-backed coup in Chile',
+                desc: 'On September 11, 1973, Chilean armed forces led by General Augusto Pinochet overthrew President Salvador Allende’s democratically elected Marxist government in a violent coup.',
+                link: 'https://www.npr.org/2023/09/10/1193755188/chile-coup-50-years-pinochet-kissinger-human-rights-allende'
+            },
+            {
+                date: '0079-08-24',
+                title: 'Eruption of Mount Vesuvius in Pompeii',
+                desc: 'In 79 AD, Mount Vesuvius, a stratovolcano located in the modern-day region of Campania, erupted, causing one of the deadliest eruptions in history.',
+                link: 'https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD'
+            },
+            {
+                date: '1964-10-16',
+                title: 'Sharon Stouder won four Olympic medals as a 15-year-old swimmer in 1964',
+                desc: 'American swimmer Sharon Stouder sets a world record of 1:04.7 to beat Ada Kok of the Netherlands by 0.9 seconds and win the women\'s 100 m butterfly at the Tokyo Olympics',
+                link: 'https://www.olympedia.org/results/5804'
+            },
+            {
+                date: '1812-06-18',
+                title: 'The War of 1812 started',
+                desc: 'The War of 1812 officially began on June 18, 1812, when U.S. President James Madison signed a declaration of war against Great Britain. The conflict was declared following tensions over maritime rights, trade blockades, and British support for Native American tribes against U.S. expansion',
+                link: 'https://www.britannica.com/event/War-of-1812'
+            },
+            {
+                date: '1776-07-04',
+                title: 'The American Revolutionary War happened',
+                desc: 'In 1776, the American colonies declared independence from Great Britain, officially adopting the Declaration of Independence on July 4th and transforming the rebellion into the Revolutionary War. Key events included the British evacuation of Boston, the challenging New York campaign, the publication of Thomas Paine’s Common Sense, and Washington’s surprise crossing of the Delaware River.',
+                link: 'https://en.wikipedia.org/wiki/American_Revolutionary_War'
+            }
+        ]);
+
+        console.log('Seeded successfully');
+        mongoose.connection.close();
+    })
+    .catch(err => console.error(err));
+
+
+/*
+const eventSchema = new mongoose.Schema({
+    date: String,
+    title: String,
+    description: String,
+    link: String
+});
+*/
