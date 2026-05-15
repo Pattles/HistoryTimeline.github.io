@@ -19,18 +19,16 @@ router.get('/', async (req, res) => {
     }
 });
 
-/*
 router.post('/', async (req, res) => {
     if (req.headers['x-admin-password'] !== process.env.ADMIN_PASSWORD) {
         return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const { title, artist, year, tags } = req.body;
-    const song = await Song.create({ title, artist, year, tags });
+    const { date, title, desc, link } = req.body;
+    const song = await Event.create({ date, title, desc, link });
     res.json(song);
 
-    console.log(`Added song: ${title}`)
+    console.log(`Added event: ${title}`)
 });
-*/
 
 module.exports = router;

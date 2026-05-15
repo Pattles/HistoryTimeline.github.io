@@ -1,0 +1,139 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.overlay-container {
+    position: relative; /* so gate-toprow positions relative to this */
+    background-color: #f7f2ea;
+    border: 2px solid #e0d9ce;
+    border-radius: 0.5rem;
+    min-width: 25rem; /* use width instead of padding for sizing */
+    overflow: hidden; /* keeps toprow inside the rounded corners */
+}
+
+.blur {
+    background-color: rgba(247, 242, 234, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* */
+.overlay-header {
+    background-color: #18100a;
+    align-items: center;
+    padding: 2rem;
+}
+
+.overlay-header__lead {
+    color: #c8a44a;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.overlay-header__subtitle {
+    color: #7a6e5a;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.overlay-form {
+    padding: 1rem 2rem;
+}
+
+.overlay-form__lead {
+    color: #7a6e5a;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-form__input,
+.overlay-form__date {
+    width: 100%;
+    background: #faf8f3;
+    border: 0.5px solid #d0c9b8;
+    border-radius: 0.5rem;
+    color: #2c2416;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+}
+
+.overlay-form__date,
+.overlay-form__input::placeholder {
+    text-align: left;
+    color: #7a6e5a;
+}
+
+.overlay-form__date::-webkit-calendar-picker-indicator {
+    display:initial;
+}
+
+.overlay-form__note {
+    font-family: 'DM Sans', sans-serif;
+    color: #9a9288;
+    font-size: 0.75rem;
+}
+
+.overlay-actions {
+    padding: 1rem 2rem;
+    border-top: 0.5px solid #d0c9b8;
+    gap: 0.5rem;
+}
+
+.overlay-actions__button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+.overlay-actions__cancel {
+    border: 1px solid #d0c9b8;
+    color: #18100a;
+    background-color: #f7f2ea;
+    width: 7.5rem;
+}
+
+.overlay-actions__continue {
+    border: 0.5px solid #c8a44a;
+    color: #18100a;
+    background-color: #c8a44a;
+    width: 13rem;
+}
+
+.overlay-actions__cancel:hover {
+    border-color:  rgb(172, 126, 9);
+    color:  rgb(172, 126, 9);
+}
+
+.overlay-actions__continue:hover {
+    background-color: #b89539;
+    color: #18100a;
+}
+
+/*
+#18100a — near-black dark brown (header background)
+#c8a44a — antique gold (accents, tags, dots, year labels)
+#f7f2ea — warm parchment (card background, header text)
+#e0d9ce — slightly darker parchment (outer background)
+#d0c9b8 — muted tan (borders, divider)
+#7a6e5a / #8a7d65 / #655a46 — various warm grays (subtitle and body text at different opacities)
+*/

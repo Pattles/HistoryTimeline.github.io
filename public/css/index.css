@@ -8,10 +8,36 @@ body, html {
     background-color: #f7f2ea;;
 }
 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"]:hover {
+    box-shadow: inset 0 0 0 2px #c8a44a;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #c8a44a;
+}
+
+/* */
 
 section {
     padding: 2rem 4rem 3rem; 
@@ -30,16 +56,15 @@ button, input {
     cursor: pointer;
 }
 
-button:hover, input:hover, a:hover {
+.section-hero__btn:hover,
+.section-hero__input:hover {
     border-color:  rgb(172, 126, 9);
     color:  rgb(172, 126, 9);
 }
 
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
+#hero-date::-webkit-calendar-picker-indicator {
+    display: none;
 }
-
 
 /* Sections */
 /* Hero */

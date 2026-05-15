@@ -2,7 +2,10 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/log.css">
     <script src="scripts/script.js"></script>
+    <script src="scripts/log.js"></script>
+    <script src="scripts/footer.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -14,12 +17,9 @@
                 <p style="color: #655a46;">A curated archive of historically significant dates - enter any date and explore what happened on that day.</p>
             </div>
             <div class="section-hero__buttons">
-                <button id="hero-btnGen">Search</button>
-                <input type="date" id="hero-date">
-                <button id="hero-btnRandom">Random</button>
-                <!-- <button class="section-hero__btn" id="hero-btnAddnew">Contribute</button>
-                    May 10: todo, sometime in the future 
-                -->
+                <button class="section-hero__btn" id="hero-btnGen">Search</button>
+                <input class="section-hero__input" type="date" id="hero-date">
+                <button class="section-hero__btn" id="hero-btnRandom">Random</button>
             </div>
         </div>
     </section>
@@ -58,46 +58,63 @@
             <div class="footer-meta">
                 <div class="footer-meta__item">
                 <div class="footer-meta__dot"></div>
-                <p>Created March 12 2026</p>
+                <p id="gate-open" style="text-decoration: underline; cursor: pointer">Updated May 15 2026</p>
             </div>
             <div class="footer-meta">
                 <div class="footer-meta__item">
                 <div class="footer-meta__dot"></div>
-                <p>Updated May 14 2026</p>
+                <p id="footer-catalogued">Events catalogued: 0</p>
             </div>
         </div>
         <div style="margin-left: auto">
             <p><a class="footer-link" href="https://github.com/Pattles/HistoryTimeline" target="_blank">View project on Github &#8594</a></p>
         </div> 
     </footer>
-    <!-- 
-    May 10: I can't be bothered to do this rn, plus it doesn't even work on Render so I won't fix it for now. MVP works
-
-    <div id="modal-addnew" class="modal">
-        <div class="container">
-            <div style="background-color: #18100a; padding: 20rem 20rem; border: 0.1rem solid #c8a44a; border-radius: 0.25rem;">
-                
+    <div id="overlay-gate" class="overlay blur" style="display: none;">
+        <div class="overlay-container">
+            <div class="overlay-header column">
+                <h3 class="overlay-header__lead">Contributors Only</h3>
+                <p class="overlay-header__subtitle">Enter your password to add a new event.</p>
+            </div>
+            <div class="overlay-form column">
+                <p class="overlay-form__lead">Password</p>
+                <input id="gate-pass" class="overlay-form__input" type="text">
+                <p class="overlay-form__note">&nbsp;</p> <!-- Incorrect password. Please try again. -->
+            </div>
+            <div class="overlay-actions row">
+                <button class="overlay-actions__button overlay-actions__cancel">Cancel</button>
+                <button class="overlay-actions__button overlay-actions__continue">Continue</button>
             </div>
         </div>
     </div>
-    --> 
-
-    <!-- 
-    <div id="modal-addnew"> <\!-- popup modal -\->
-        <div class="container" style="height: 100%">
-            <div class="modal-addnew__card">
-                <h4>Enter event details</h4>
-                <input class="section-hero__btn" type="date" id="input-addnewDate"> <!\-- class="modal-addnew__date" if you'd like it centered --\>
-                <input class="modal-addnew__textarea" placeholder="title" id="input-addnewTitle">
-                <textarea class="modal-addnew__textarea" id="input-addnewDesc" placeholder="description"></textarea>
-                <input class="modal-addnew__textarea" id="input-addnewLink" placeholder="relevant links (optional)">
-                <div class="modal-addnew__btns">
-                    <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewSubmit">Submit</button>
-                    <button class="modal-addnew__btn" style="flex: 1;" id="modal-addnewClose">Close</button>
+    <div id="overlay-contribute" class="overlay blur" style="display: none;">
+        <div class="overlay-container">
+            <div class="overlay-header column">
+                <h3 class="overlay-header__lead">Add Event</h3>
+            </div>
+            <div class="overlay-form column">
+                <div class="column">
+                    <p class="overlay-form__lead">Date</p>
+                    <input id="contribute-date" class="overlay-form__date" type="date">
+                </div>
+                <div class="column">
+                    <p class="overlay-form__lead">Title</p>
+                    <input id="contribute-title" class="overlay-form__input" type="text" placeholder="e.g. Redbull was founded">
+                </div>
+                <div class="column">
+                    <p class="overlay-form__lead">Description</p>
+                    <textarea id="contribute-desc" class="overlay-form__input" style="resize: vertical" placeholder="What happened?"></textarea>
+                </div>
+                <div class="column">
+                    <p class="overlay-form__lead">Source link</p>
+                    <input id="contribute-link" class="overlay-form__input" type="text" placeholder="https://wikipedia.org/...">
                 </div>
             </div>
+            <div class="overlay-actions row">
+                <button class="overlay-actions__button overlay-actions__cancel">Cancel</button>
+                <button class="overlay-actions__button overlay-actions__continue">Save event</button>
+            </div>
         </div>
     </div>
-    --> 
 </body>
 </html>
